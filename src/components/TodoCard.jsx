@@ -2,7 +2,7 @@ export function TodoCard({
   todo,
   handleCompleteTodo,
   handleDeleteTodo,
-  index,
+  todoIndex,
 }) {
   console.log("completed? ", todo.complete);
   return (
@@ -10,12 +10,12 @@ export function TodoCard({
       <p>{todo.input}</p>
       <div className="todo-buttons">
         <button
-          onClick={() => handleCompleteTodo(index)}
+          onClick={() => handleCompleteTodo(todoIndex)}
           disabled={todo.complete}
         >
           <h6>Done</h6>
         </button>
-        <button onClick={() => handleDeleteTodo(index)}>
+        <button onClick={() => handleDeleteTodo(todoIndex)}>
           <h6>Delete</h6>
         </button>
       </div>

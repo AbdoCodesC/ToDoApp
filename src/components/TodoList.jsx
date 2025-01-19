@@ -19,7 +19,7 @@ export function TodoList({
         <TodoCard
           todo={todo}
           key={index}
-          index={index}
+          todoIndex={todos.findIndex((val) => val.input === todo.input)}
           handleDeleteTodo={handleDeleteTodo}
           handleCompleteTodo={handleCompleteTodo}
         />
